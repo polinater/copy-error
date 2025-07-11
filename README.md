@@ -1,71 +1,71 @@
-# copy-error README
+# Copy Error ‑ VS Code Extension
 
-This is the README for your extension "copy-error". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Save a few seconds (and your sanity) every time you need to share an error message with your team or an AI assistant. **Copy Error** adds a tiny clipboard icon to the gutter next to each diagnostic (error, warning, or info). One click copies the exact message text to your clipboard – no more selecting, right-clicking or fiddling with pop-ups.
 
 ---
 
-## Following extension guidelines
+## ✨ Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+* **One-click copy** – Clipboard icon appears inline with the error underline; click to copy the full diagnostic message.
+* **Works everywhere** – Uses VS Code’s built-in diagnostics, so it supports TypeScript, JavaScript, Python, Go, Rust … anything that reports problems.
+* **AI-friendly output** – Plain-text message only (no file path, code, or decorations) – perfect for pasting into an LLM prompt.
+* **Zero configuration** – Install and go.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## 📸 Screenshots
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+> _Add screenshots or a short GIF after the UI is implemented._
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## 🚀 Getting Started (Development)
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+1. **Clone & install**
+   ```bash
+   git clone https://github.com/your-handle/copy-error.git
+   cd copy-error
+   npm install
+   ```
+2. **Launch Extension Host**
+   * Press <kbd>F5</kbd> in VS Code to open a Development Host window with the extension loaded.
+3. **Try it out**
+   * Open a file with a TypeScript error.
+   * Hover the red underline – a 📋 icon appears in the gutter. Click it – the message is now on your clipboard.
 
-**Enjoy!**
+---
+
+## 🛠 Commands
+
+| Command ID | Title | Description |
+|------------|-------|-------------|
+| `copy-error.copyDiagnostic` | Copy Diagnostic Message | Copies the message(s) for the diagnostic at the cursor position.
+
+The command is also exposed via the gutter icon decoration, so you rarely need to invoke it manually.
+
+---
+
+## ⚙️ Extension Settings
+
+_No settings yet – everything just works._
+
+---
+
+## 🗺 Roadmap
+
+* [ ] Setting: include file/line info in copied text
+* [ ] Support multi-cursor copy (copy all diagnostics for all selections)
+* [ ] “Copy all diagnostics in file” command
+* [ ] Option to automatically format as Markdown / code block
+
+---
+
+## 🤝 Contributing
+
+Pull requests and issues are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines (to be added).
+
+---
+
+## 📄 License
+
+MIT © 2025 Your Name

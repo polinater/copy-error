@@ -4,18 +4,26 @@
   "description": "",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.102.0"
+    "vscode": "^1.88.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "*",
+    "onCommand:copy-error.helloWorld",
+    "onCommand:copy-error.copyDiagnostic"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "copy-error.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "copy-error.copyDiagnostic",
+        "title": "Copy Diagnostic Message"
       }
     ]
   },
